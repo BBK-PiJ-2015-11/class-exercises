@@ -1,0 +1,11 @@
+println(buggyMethod(9));
+
+String buggyMethod(int n) {
+  // we need to check for values less than zero
+  // in case n is odd
+  if (n <= 0) {
+    return "";
+  }
+
+  return n + " " + buggyMethod(n - 2);
+}
