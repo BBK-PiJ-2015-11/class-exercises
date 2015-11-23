@@ -1,0 +1,59 @@
+boolean running = true;
+
+while(running) {
+  println("Please select an option:");
+  println("1. Convert a binary number to decimal");
+  println("2. Convert a decimal number to binary");
+
+  int choice = readInt();
+  switch (choice) {
+    case 1:
+      binary2decimal();
+      break;
+    case 2:
+      decimal2binary();
+      break;
+    default:
+      println("Invalid number entered, try again");
+      break;
+  }
+}
+
+int power(int b, int e) {
+  return (int) Math.pow((double) b, (double) e);
+}
+
+int power2(int e) {
+  return power(2, e);
+}
+
+void binary2decimal() {
+  // We could cheat here and use
+  // parseInt(String s, int radix)
+  print("Please enter a binary number: ");
+  String binNumInput = readLine();
+
+  int decimal = 0;
+
+  for (int n = binNumInput.length(); n > 0; n--) {
+    char c = binNumInput.charAt(n);
+
+    if (c != '0' || c != '1') {
+      println("Number is not valid binary, try again");
+      return;
+    }
+
+    decimal += power2(Integer.parseInt(String.valueOf(c)));
+  }
+
+  println("Result: " + decimal);
+}
+
+void decimal2binary() {
+  print("Please enter a decimal number: ");
+  String decNumInput = readLine();
+
+
+  //for () {
+  //}
+}

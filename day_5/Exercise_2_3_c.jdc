@@ -1,0 +1,10 @@
+println(calculateHanoiMoves(64));
+
+int calculateHanoiMoves(int numDiscs) {
+  if (numDiscs == 1) {
+    return 1;
+  }
+
+
+  return 1 + calculateHanoiMoves((numDiscs - 1));
+}

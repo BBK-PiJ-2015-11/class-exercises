@@ -1,0 +1,20 @@
+println(factorialIterative(5));
+println(factorialRecursive(5));
+
+int factorialIterative(int n) {
+  int total = n;
+
+  for(int i = 1; i < n; i++) {
+    total = total * (n - i);
+  }
+
+  return total;
+}
+
+int factorialRecursive(int n) {
+  if (n == 1) {
+    return 1;
+  } else {
+    return n * factorialRecursive(n-1);
+  }
+}

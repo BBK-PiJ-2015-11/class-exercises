@@ -1,0 +1,21 @@
+// Incomplete
+//println(fibonacciRecursive(40));
+println(fibonacciIterative(40));
+
+int fibonacciRecursive(int n) {
+  if ((n == 1) || (n == 2)) {
+    return 1;
+  } else {
+    return fibonacciRecursive(n-1) + fibonacciRecursive(n-2);
+  }
+}
+
+int fibonacciIterative(int n) {
+  int total = n;
+
+  for(int i = 0; i <= n; i++) {
+    total = total + (i - 1) + (i - 2);
+  }
+
+  return total;
+}

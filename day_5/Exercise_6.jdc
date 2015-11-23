@@ -1,0 +1,11 @@
+println(greatestCommonDenominator(12, 15));
+println(greatestCommonDenominator(12, 6));
+println(greatestCommonDenominator(14, 27));
+
+int greatestCommonDenominator(int p, int q) {
+  if (p % q == 0) {
+    return q;
+  }
+
+  return greatestCommonDenominator(q, p % q);
+}
