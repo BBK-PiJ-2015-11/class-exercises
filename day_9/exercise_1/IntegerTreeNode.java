@@ -57,19 +57,14 @@ public class IntegerTreeNode {
 
     public String toString() {
       String ret = "[" + this.value;
-      ret += " L";
 
-      if (this.left == null) {
-        ret += "[]";
-      } else {
+      if (this.left != null) {
+        ret += " ";
         ret += this.left;
       }
 
-      ret += " R";
-
-      if (this.right == null) {
-        ret += "[]";
-      } else {
+      if (this.right != null) {
+        ret += " ";
         ret += this.right;
       }
 
