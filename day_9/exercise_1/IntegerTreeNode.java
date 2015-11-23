@@ -55,6 +55,29 @@ public class IntegerTreeNode {
       }
     }
 
+    public String toString() {
+      String ret = "[" + this.value;
+      ret += " L";
+
+      if (this.left == null) {
+        ret += "[]";
+      } else {
+        ret += this.left;
+      }
+
+      ret += " R";
+
+      if (this.right == null) {
+        ret += "[]";
+      } else {
+        ret += this.right;
+      }
+
+      ret += "]";
+
+      return ret;
+    }
+
     public IntegerTreeNode(int n) {
       this.value = n;
     }
@@ -74,5 +97,7 @@ public class IntegerTreeNode {
 
       System.out.println(root.getMin());
       System.out.println(root.getMax());
+
+      System.out.println(root);
     }
 }
