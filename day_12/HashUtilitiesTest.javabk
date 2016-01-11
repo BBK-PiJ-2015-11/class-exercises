@@ -1,0 +1,19 @@
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.lessThan;
+import static org.junit.Assert.assertThat;
+
+import org.junit.Test;
+
+public class HashUtilitiesTest {
+  @Test
+  public void testsNormalName() {
+    //for(int i = 2000; i > 0; i--) {
+      int i = 5;
+      System.out.println(i);
+      int actual = HashUtilities.shortHash(i);
+      assertThat(actual, is(lessThan(1000)));
+      assertThat(actual, is(greaterThan(0)));
+   // }
+  }
+}
